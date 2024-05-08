@@ -69,16 +69,20 @@ while True:
                 print("""
     To update user details please enter the followig detail................
 """)
+
                 mycursor=fit.cursor()
                 passs=int(input("Update password: "))
+
                 mycursor.execute("update main_table set passwd='"+str(passs)+"'")
                 fit.commit()
                 print('')
                 uname=input("Update user name: ")
+
                 mycursor.execute("update main_table set user_name='"+uname+"'")
                 fit.commit()
                 print('')
                 uaddress=input("Update address of user: ")
+
                 mycursor.execute("update main_table set user_address='"+uaddress+"'")
                 fit.commit()
                 print('')
